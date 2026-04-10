@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why MCP (Model Context Protocol) Changes Everything for AI Tool Integration | Luke Byrne</title>
+  <meta name="description" content="What the Model Context Protocol (MCP) is, why it matters for AI developers, and how it connects Claude, ChatGPT, and other AI tools to any service or API.">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Luke Byrne</a>
+    <div class="nav-links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode"></button>
+    </div>
+  </div>
+</nav>
+
+<article class="blog-post">
+  <div class="container fade">
+    <a href="../blog.html" class="blog-back">&larr; All posts</a>
+    <span class="blog-date">April 2026</span>
+    <h1 class="blog-title">Why MCP Changes Everything for <em>AI Tool Integration</em></h1>
+
+    <p>If you have used Claude Code, you have already used MCP without knowing it. The Model Context Protocol is the open standard that lets AI models connect to external tools, databases, and APIs. It was introduced by Anthropic in November 2024, and in just over a year it has become the universal connector for the AI ecosystem. Here is why it matters and how I use it every day.</p>
+
+    <h2>The Problem MCP Solves</h2>
+    <p>Before MCP, every AI application that needed to talk to an external service required a custom integration. Claude needs Google Drive access? Build a connector. ChatGPT needs to query your database? Build another one. Cursor needs to read your Jira tickets? That is yet another bespoke integration. If you have N AI applications and M tools, you need N times M custom integrations. That does not scale.</p>
+    <p>MCP reduces this to N plus M. Build one MCP server for your tool, and every MCP-compatible AI client can use it. Claude, ChatGPT, Gemini, Cursor, VS Code, and custom agents all speak the same protocol. One integration, universal access.</p>
+
+    <h2>How MCP Works</h2>
+    <p>The protocol has three roles. The host is the AI application the user interacts with. The client lives inside the host and manages connections to MCP servers. The server exposes capabilities to the AI through three primitives:</p>
+    <ul>
+      <li><strong>Tools</strong> are actions the AI can take: send a message, create a record, run a query, trigger a deployment.</li>
+      <li><strong>Resources</strong> are data the AI can read: files, database rows, API responses, documents.</li>
+      <li><strong>Prompts</strong> are reusable templates that guide AI behavior for specific tasks.</li>
+    </ul>
+    <p>MCP does not replace your existing APIs. It is the protocol layer that gives AI a standardized way to discover and use them.</p>
+
+    <h2>The Ecosystem in 2026</h2>
+    <p>The numbers tell the story. The Python and TypeScript MCP SDKs see roughly 97 million monthly downloads. OpenAI, Google DeepMind, and Microsoft have all adopted MCP. In December 2025, Anthropic donated MCP to the Agentic AI Foundation under the Linux Foundation, making it a vendor-neutral, community-governed standard. This is not one company's proprietary protocol anymore. It is an industry standard.</p>
+
+    <h2>How I Use MCP in My Workflow</h2>
+    <p>In Claude Code, I run multiple MCP servers simultaneously. Firecrawl for web scraping and research. A file system server for project access. Custom servers for specific APIs I integrate with regularly. When I ask Claude to research a topic, scrape a website, and build a component based on what it finds, MCP is the layer that connects all of those capabilities seamlessly.</p>
+    <p>For builders shipping AI-powered products, MCP is the infrastructure layer you should be learning right now. If your product needs to connect to external services, building an MCP server means instant compatibility with Claude, ChatGPT, and every other major AI platform.</p>
+
+    <h2>Where MCP Is Heading</h2>
+    <p>The 2026 roadmap focuses on better authentication and authorization, improved async task handling, and tighter integration with enterprise systems. The transport layer now supports both local stdio connections and remote Streamable HTTP, which means MCP servers can run anywhere from your laptop to a cloud deployment behind a load balancer.</p>
+
+    <p>MCP is to AI tools what HTTP was to the web. It is the protocol that makes the ecosystem work. If you are building with AI in 2026, understanding MCP is not optional. It is foundational.</p>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Byrne Media Ltd. Built with care in Carlisle.</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

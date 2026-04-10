@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Use Claude Code to Ship Products Faster | AI Coding Workflow | Luke Byrne</title>
+  <meta name="description" content="My daily Claude Code workflow for shipping SaaS products fast. Sub-agents, parallel tasks, Next.js, Tailwind, and Netlify deployment in a single session.">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Luke Byrne</a>
+    <div class="nav-links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode"></button>
+    </div>
+  </div>
+</nav>
+
+<article class="blog-post">
+  <div class="container fade">
+    <a href="../blog.html" class="blog-back">&larr; All posts</a>
+    <span class="blog-date">April 2026</span>
+    <h1 class="blog-title">How I Use Claude Code to Ship Products <em>Faster</em></h1>
+
+    <p>I ship a lot. Between Scripti, Ark, the Viral Scout dashboards, and client sites, I'm usually pushing code to multiple projects in a single day. The tool that makes this possible is Claude Code.</p>
+
+    <h2>The Daily Loop</h2>
+    <p>My workflow is simple: describe what I want, let Claude Code build it, review, and push. Most mornings I'll open a terminal, describe a feature in plain English, and have working code deployed before lunch. The key shift wasn't learning a new language or framework,it was learning to think in terms of intent rather than implementation.</p>
+
+    <h2>Sub-Agents Are the Multiplier</h2>
+    <p>The biggest unlock for me was parallel sub-agents. Instead of working through tasks sequentially, I'll spawn a team: one agent researching the API, another scaffolding the UI, a third writing tests. It's like having a small engineering team that works at the speed of your thinking.</p>
+    <p>For a recent project, I had three agents running simultaneously,one building the scraping layer with Apify, one handling the Next.js frontend, and one setting up Netlify deployment. The whole thing was live in under two hours.</p>
+
+    <h2>Where It Breaks Down</h2>
+    <p>It's not magic. Claude Code works best when you know what you want. Vague prompts produce vague code. The skill is in being precise about the outcome while leaving room for the implementation. I've also learned to read every diff,trusting the output without review is how bugs sneak in.</p>
+
+    <h2>My Stack</h2>
+    <p>For almost everything I build: Next.js + Tailwind for the frontend, Netlify for hosting, and Netlify Blobs for lightweight persistence when I don't need a full database. Claude Code ties it all together. I rarely write boilerplate by hand anymore,I describe the architecture and iterate from there.</p>
+
+    <p>If you're building things and not using an AI coding tool yet, you're leaving speed on the table. It won't replace your judgement, but it will compress weeks into days.</p>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Byrne Media Ltd. Built with care in Carlisle.</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
